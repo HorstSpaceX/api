@@ -241,11 +241,11 @@ function encode_inventory_to_json()
         Lever = lever,
         Bounty = bounty,
     }
-    print("Sent data 2222 !!")
+    print("Sent data 222sss2 !!")
     return HttpService:JSONEncode(result)
 end
 
 local js_string = encode_inventory_to_json()
 print(js_string)
 local playerName = game.Players.LocalPlayer.Name
-_G.ws:Send(tostring(playerName) .. ">>" .. "BF" .. ">>" .. js_string)
+_G.ws:Send(playerName .. ">>" .. "BF" .. ">>" .. js_string)
