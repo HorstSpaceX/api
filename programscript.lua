@@ -247,4 +247,5 @@ end
 
 local js_string = encode_inventory_to_json()
 print(js_string)
-_G.ws:Send(tostring(playerName) .. ">>" .. "BF" .. ">>" .. tostring(js_string))
+local playerName = game.Players.LocalPlayer.Name
+_G.ws:Send(tostring(playerName) .. ">>" .. "BF" .. ">>" .. js_string)
